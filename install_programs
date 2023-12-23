@@ -3,6 +3,7 @@
 sudo pacman -S \
     alacritty \
     brightnessctl \
+    fish \
     lazygit \
     lxappearance \
     mpv \
