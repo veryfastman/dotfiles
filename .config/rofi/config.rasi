@@ -1,5 +1,5 @@
 configuration {
-    modi: "window,drun,ssh,combi";
+    modi: "window,drun,ssh,combi,run";
     font: "InconsolataNerdFont 10";
     terminal: "/usr/bin/alacritty";
     display-drun: "󰀻 ";
@@ -8,4 +8,4 @@ configuration {
     show-icons: true;
     /* icon-theme: "Qogir"; */
 }
-@theme "./theme.css"
+@theme "./theme"
