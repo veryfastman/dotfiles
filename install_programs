@@ -1,0 +1,27 @@
+#!/bin/sh
+
+sudo pacman -S \
+    alacritty \
+    brightnessctl \
+    lazygit \
+    lxappearance \
+    mpv \
+    neovim \
+    playerctl \
+    python-pipx \
+    ripgrep \
+    rofi \
+    rofimoji \
+    starship \
+    swaybg \
+    thunar \
+    tmux \
+    yt-dlp \
+    --needed base-devel &&
+
+git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si && cd .. &&
+
+paru -S \
+    input-remapper-git \
+    librewolf-bin \
+    rofi-lbonn-wayland
