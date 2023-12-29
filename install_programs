@@ -13,6 +13,7 @@ sudo pacman -S \
     ripgrep \
     rofimoji \
     starship \
+    streamlink \
     swaybg \
     thunar \
     tmux \
