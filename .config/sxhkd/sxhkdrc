@@ -23,23 +23,19 @@ XF86AudioNext
     playerctl next
 
 super + shift + r
-    killall sxhkd ; sxhkd
+    killall sxhkd && sxhkd
 
 super + s
-    firefox
-
-super + b
-    brave-beta
+    librewolf
 
 super + f
     thunar
 
 super + r
-#   dmenu_run
-    ~/.config/rofi/launchers/type-1/launcher.sh
+    dmenu_run
 
 super + ctrl + i
-    xdotool type $(grep -v '^#' ~/.local/snippets/urls.txt | dmenu -l 20 | cut -d' ' -f1)
+    xdotool type $(grep -v '^#' ~/.local/bookmarks/urls.txt | dmenu -l 20 | cut -d' ' -f1)
 
 super + shift + i
     bookmark

@@ -1,8 +1,10 @@
 #!/bin/sh
 
+riverctl spawn 'wlr-randr --output HDMI-A-1 --pos -2525,0'
 riverctl spawn 'dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway'
 riverctl spawn /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 riverctl spawn waybar
+riverctl spawn "gsettings set org.gnome.desktop.interface gtk-theme 'gruvbox-dark-gtk'"
 riverctl spawn 'swaybg -i ~/Pictures/wallpapers/gruvy_seaside.jpg'
 
 riverctl map normal Super Return spawn alacritty
@@ -83,9 +85,13 @@ rivertile -view-padding 4 -outer-padding 4 -main-ratio 0.5 &
 riverctl input pointer-2-14-ETPS/2_Elantech_Touchpad tap enabled
 
 riverctl map normal Super R spawn 'rofi -show drun'
+riverctl map normal Super P spawn rofimoji
 riverctl map normal Super+Control I spawn 'bookmark-type'
+riverctl map normal Super I spawn 'grim -g $(slurp) && nemo ~/Pictures'
 riverctl map normal Super S spawn librewolf
+riverctl map normal Super+Shift S spawn 'librewolf -p'
+riverctl map normal Super+Control R 'killall waybar ; ~/.config/river/init'
 
-riverctl map normal Super grave toggle-focused-tags ${scratch_tag}
-riverctl map normal Super C set-view-tags ${scratch_tag}
+riverctl map normal Super grave toggle-focused-tags $((1 << 20))
+riverctl map normal Super C set-view-tags $(( ((1 << 32) - 1) ^ ((1 << 20)) ))
 riverctl spawn-tagmask ${all_but_scratch_tag}

@@ -1,0 +1,11 @@
+configuration {
+    modi: "window,drun,ssh,combi,run";
+    font: "JetBrainsMonoNerdFont 10";
+    terminal: "/usr/bin/alacritty";
+    display-drun: "󰀻 ";
+    display-run: " ";
+    drun-display-format: "{icon} {name}";
+    show-icons: true;
+    /* icon-theme: "Qogir"; */
+}
+@theme "./theme"
