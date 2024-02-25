@@ -1,0 +1,43 @@
+/* Go look at when you want a bar back: https://github.com/JoshM-Yoru/dotfiles/blob/main/waybar/style.css */
+* {
+    border: none;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+    /* color: #ebdbb2; */
+    color: #282828;
+}
+
+window#waybar {
+    background-color: rgba(0,0,0,0);
+    font-family: JetBrainsMonoNerdFont;
+    font-size: 12px;
+}
+
+#backlight,
+#clock,
+#disk,
+#memory,
+#pulseaudio,
+#tray,
+#tags,
+#window {
+    margin-right: 8px;
+    margin-left: 8px;
+    padding: 3px;
+}
+
+#battery,
+#network {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+#tags button.occupied label {
+    color: #a9b665;
+}
+
+#tags button.focused label {
+    color: #7daea3;
+}

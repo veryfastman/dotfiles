@@ -4,8 +4,8 @@ riverctl spawn 'wlr-randr --output HDMI-A-1 --pos -2525,0'
 riverctl spawn 'dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway'
 riverctl spawn /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 riverctl spawn waybar
-riverctl spawn "gsettings set org.gnome.desktop.interface gtk-theme 'gruvbox-dark-gtk'"
-riverctl spawn 'swaybg -i ~/Pictures/wallpapers/gruvy_seaside.jpg'
+riverctl spawn "gsettings set org.gnome.desktop.interface gtk-theme 'onedark-gtk'"
+riverctl spawn "swaybg -i ~/Pictures/wallpapers/onedark/onedark_minimal.png"
 
 riverctl map normal Super Return spawn alacritty
 riverctl map normal Super W close
@@ -72,26 +72,37 @@ do
     riverctl map -repeat $mode None XF86MonBrightnessDown spawn 'brightnessctl set 2%-'
 done
 
-riverctl background-color 0x282828
-riverctl border-width 1
-riverctl border-color-focused 0x458588
-riverctl border-color-unfocused 0x282828
+riverctl background-color 0x000000
+riverctl border-width 2
+# riverctl border-color-focused 0x458588
+# riverctl border-color-unfocused 0x282828
+
+# riverctl border-color-focused 0x2F638E 
+
+riverctl border-color-focused 0x4c8dc3
+riverctl border-color-unfocused 0x17191e
+
+# riverctl border-color-unfocused 0x626262
+# riverctl border-color-focused 0x7E97AB
+
 riverctl focus-follows-cursor normal
 riverctl set-cursor-warp on-focus-change
 riverctl set-repeat 110 210
 riverctl default-layout rivertile
 rivertile -view-padding 4 -outer-padding 4 -main-ratio 0.5 &
+# rivertile -view-padding 0 -outer-padding 0 -main-ratio 0.5 &
 
 riverctl input pointer-2-14-ETPS/2_Elantech_Touchpad tap enabled
 
 riverctl map normal Super R spawn 'rofi -show drun'
 riverctl map normal Super P spawn rofimoji
 riverctl map normal Super+Control I spawn 'bookmark-type'
-riverctl map normal Super I spawn 'grim -g $(slurp) && nemo ~/Pictures'
-riverctl map normal Super S spawn librewolf
-riverctl map normal Super+Shift S spawn 'librewolf -p'
-riverctl map normal Super+Control R 'killall waybar ; ~/.config/river/init'
+riverctl map normal Super I spawn 'grim -g $(slurp)'
+riverctl map normal Super S spawn firefox
+riverctl map normal Super+Shift S spawn 'firefox -p'
+riverctl map normal Super+Control R 'killall waybar && ~/.config/river/init'
+riverctl map normal Super+Shift C 'alacritty -e nvim ~/.config/river/init'
 
 riverctl map normal Super grave toggle-focused-tags $((1 << 20))
-riverctl map normal Super C set-view-tags $(( ((1 << 32) - 1) ^ ((1 << 20)) ))
-riverctl spawn-tagmask ${all_but_scratch_tag}
+riverctl map normal Super C set-view-tags $((1 << 20))
+riverctl spawn-tagmask $(( ((1 << 32) - 1) ^ $((1 << 20)) ))

@@ -1,6 +1,0 @@
-#!/bin/sh
-
-cp -r .config/* ~/.config
-cp .bashrc ~/.bashrc
-cp .tmux.conf ~/.tmux.conf
-git clone https://github.com/veryfastman/neovim-config ~/.config/nvim

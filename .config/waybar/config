@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 32,
+    "height": 21,
     "modules-left": [ "river/tags" ],
     "modules-center": [ "river/window" ],
     "modules-right": [ "tray", "network", "battery", "disk", "memory", "backlight", "pulseaudio", "clock" ],
