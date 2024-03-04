@@ -8,4 +8,4 @@ configuration {
     /* show-icons: true; */
     /* icon-theme: "Qogir"; */
 }
-@theme "./onedark"
+@theme "./minimal"

@@ -1,6 +1,6 @@
 import = [
-    "~/.config/alacritty/colors/onedark.toml",
-    "~/.config/alacritty/fonts/jetbrains_mono.toml"
+    "~/.config/alacritty/colors/base_16_default_dark.toml",
+    "~/.config/alacritty/fonts/firacode.toml"
     # "~/.config/alacritty/fonts/liberation_mono.toml"
 ]
 

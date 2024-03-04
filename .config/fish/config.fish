@@ -3,9 +3,7 @@ if status is-interactive
 end
 
 set fish_greeting
-fish_add_path ~/.local/bin
-fish_add_path ~/.cargo/bin
-set PATH /nix/var/nix/profiles/default/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin
+set PATH /nix/var/nix/profiles/default/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin ~/.cargo/bin ~/.local/bin
 export VISUAL="nvim"
 export EDITOR="$VISUAL"
 

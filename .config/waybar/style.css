@@ -1,9 +1,9 @@
 * {
-    background: #17191e;
+    background: #181818;
     border: none;
     border-radius: 0;
-    color: #a0a8b7;
-    font-family: JetBrainsMonoNerdFont;
+    color: #d8d8d8;
+    font-family: RobotoMonoNerdFont;
     font-size: 12px;
     margin: 0;
     padding: 0;
@@ -30,12 +30,12 @@
 }
 
 #workspaces button.active label {
-    color: #e2b86b;
+    color: #f7ca88;
     font-weight: bold;
 }
 
 #tags button.occupied label {
-    color: #4fa6ed;
+    color: #7E97AB;
 }
 
 #tags button.focused label {
